@@ -26,6 +26,19 @@ Then(/^Count of "([^"]*)" should( not)? be "([^"]*)"$/, async (alias, notArg, ex
     }
 });
 
+Then(/^Count of "([^"]*)" should( not)? more "([^"]*)"$/, async (alias, notArg, expectedNumber) => {
+    notArg = notArg ? ' not' : '';
+    let element = elementHelper(alias);
+    let result = await element.count();
+    expectedNumber = parseInt(expectedNumber);
+    logger.info(`Count of ${alias} should${notArg} be ${expectedNumber}`);
+    if (notArg) {
+        return expect(result).to.be.below(expectedNumber);
+    } else {
+        return expect(result).to.be.above(expectedNumber);
+    }
+});
+
 Then(/^Text of "([^"]*)" should( not)? contain "([^"]*)"$/, async (alias, notArg, textToContain) => {
     notArg = notArg ? ' not' : '';
     let element = elementHelper(alias);

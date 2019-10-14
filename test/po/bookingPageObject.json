@@ -37,5 +37,45 @@
     "EmailError": {
         "isCollection": false,
         "selector": "//*[@id='username-error']"
+    },
+
+    "SearchCityField": {
+        "isCollection": false,
+        "selector": "//*[@id='ss']"
+    },
+
+    "DateField": {
+        "isCollection": false,
+        "selector": "//*[@class='xp__dates-inner']"
+    },
+
+    "NearestSaturday": {
+        "isCollection": false,
+        "selector": "(//td[6][@class='bui-calendar__date'])[1]"
+    },
+
+    "NearestSunday": {
+        "isCollection": false,
+        "selector": "(//td[7][@class='bui-calendar__date'])[1]"
+    },
+
+    "SearchButton": {
+        "isCollection": false,
+        "selector": "//*[text()='Search']/.."
+    },
+
+    "ListOfHotels": {
+        "isCollection": true,
+        "selector": "//*[@class='hotel_name_link url']//span[1]"
+    },
+
+    "ReserveButton": {
+        "isCollection": false,
+        "selector": "(//*[@id='hp_book_now_button'])[1]"
+    },
+
+    "ListOfRooms": {
+        "isCollection": true,
+        "selector": "//*[@class='hprt-roomtype-link']"
     }
 }

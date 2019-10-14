@@ -1,5 +1,5 @@
 "use strict";
-const { When } = require('cucumber');
+const {When} = require('cucumber');
 const highlightElement = require('../utils/stepFunctions.js').highlightElement;
 const logger = require('../../config/logger.config.js').logger;
 
@@ -16,4 +16,13 @@ When(/^I open "([^"]*)" url$/, (url) => {
 When(/^I highlight "([^"]*)"$/, (alias) => {
     logger.info(`I highlight ${alias}`);
     return highlightElement(alias);
+});
+
+When(/^I switch to next tab$/, async () => {
+    let currentHandle = await browser.driver.getWindowHandle();
+    let arrayOfHandles = await browser.driver.getAllWindowHandles();
+    let indexOfCurrentHandle = arrayOfHandles.indexOf(currentHandle);
+    let indexOfTabToSwitchTo = ++indexOfCurrentHandle;
+    const handleToSwitchTo = arrayOfHandles[indexOfTabToSwitchTo];
+    return browser.driver.switchTo().window(handleToSwitchTo);
 });
