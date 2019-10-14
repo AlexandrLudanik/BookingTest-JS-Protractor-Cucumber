@@ -13,7 +13,7 @@ When(/^I type text "([^"]*)" to "([^"]*)"$/, async (text, alias) => {
     return await elementHelper(alias).sendKeys(text);
 });
 
-When(/^I choose "([^"]*)" in "([^"]*)"$/, async (text, alias) => {
+When(/^I click "([^"]*)" in "([^"]*)"$/, async (text, alias) => {
     const arrayOfElementTexts = await elementHelper(alias).getText();
     const elementToClickIndex = arrayOfElementTexts.indexOf(text);
     if (elementToClickIndex === -1) {

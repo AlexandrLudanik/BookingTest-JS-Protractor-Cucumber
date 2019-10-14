@@ -13,7 +13,7 @@ Feature: Check available rooms in the hotel
     And I wait until "SearchButton" is clickable
     And I click "SearchButton"
     And I wait until "ListOfHotels" is present
-    And I choose "<Hotel>" in "ListOfHotels"
+    And I click "<Hotel>" in "ListOfHotels"
     And I switch to next tab
     And I wait until "ReserveButton" is clickable
     And I click "ReserveButton"
