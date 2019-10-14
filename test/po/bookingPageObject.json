@@ -1,0 +1,41 @@
+{
+    "SignIn": {
+        "isCollection": false,
+        "selector": "(//div[@class='sign_in_wrapper'])[2]"
+    },
+
+    "EmailField": {
+        "isCollection": false,
+        "selector": "//*[@id='username']"
+    },
+
+    "NextButton": {
+        "isCollection": false,
+        "selector": "(//*[@type='submit'])[1]"
+    },
+
+    "PasswordField": {
+        "isCollection": false,
+        "selector": "//*[@id='password']"
+    },
+
+    "SignInButton": {
+        "isCollection": false,
+        "selector": "(//*[@type='submit'])[1]"
+    },
+
+    "LOGO": {
+        "isCollection": false,
+        "selector": "//*[@id='current_account']"
+    },
+
+    "PasswordError": {
+        "isCollection": false,
+        "selector": "//*[@id='password-error']"
+    },
+
+    "EmailError": {
+        "isCollection": false,
+        "selector": "//*[@id='username-error']"
+    }
+}
